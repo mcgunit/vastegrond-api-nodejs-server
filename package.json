@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/mcgunit/vastegrond-api-nodejs-server/issues"
   },
-  "homepage": "https://github.com/mcgunit/vastegrond-api-nodejs-server#readme"
+  "homepage": "https://github.com/mcgunit/vastegrond-api-nodejs-server#readme",
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "mongoose": "^7.0.3"
+  }
 }
