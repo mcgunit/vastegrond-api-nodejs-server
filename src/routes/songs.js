@@ -21,7 +21,7 @@ router.get('/getsongs', (req, res) => {
 
   SongsModel.find({})
   .then((songsList) => {
-    console.log("Getting Songs: ", songsList);
+    //console.log("Getting Songs: ", songsList);
     res.json({songsList: songsList});
   })
   .catch((err) => {
