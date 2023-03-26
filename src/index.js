@@ -12,11 +12,12 @@ app.use('/songs', songs);
 app.use(express.static('public'));
 
 /* Configs */
+let SERVER_PORT = process.env.PORT || 9000;
 let MONGO_HOST = process.env.MONGO_HOST || "mongodb:27016";
 let MONGO_DB = process.env.MONGO_DB || "vastegrond";
 
 
-const server = app.listen(8080, function () {
+const server = app.listen(SERVER_PORT, () => {
     const port = server.address().port
     
     console.log("Vaste Grond listening at ", port);

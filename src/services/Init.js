@@ -23,13 +23,13 @@ async function initDB() {
                 let title = results[i].Title;
                 let text = results[i].Body;
 
-                console.log("Title: ", title);
-                console.log("Body: ", text);
+                //console.log("Title: ", title);
+                //console.log("Body: ", text);
 
                 
                 SongsModel.find({name: title})
                 .then((result) => {
-                    console.log("checking song: ", result);
+                    //console.log("checking song: ", result);
                     if(result.length == 0) {
                         SongsModel.create({ name: title, text: text});
                     } else {
