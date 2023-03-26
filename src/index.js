@@ -1,21 +1,36 @@
 const express = require('express');
 const app = express();
+const mongoose = require("mongoose");
 
-const songs = require('./routes/songs');
-
+const init = require("./services/Init");
 
 /* Router */
+const songs = require('./routes/songs');
 app.use('/songs', songs);
-
-
 
 // To server static files located in the pujblic folders
 app.use(express.static('public'));
 
+/* Configs */
+let MONGO_HOST = process.env.MONGO_HOST || "mongodb:27016";
+let MONGO_DB = process.env.MONGO_DB || "vastegrond";
+
 
 const server = app.listen(8080, function () {
-    const host = server.address().address
     const port = server.address().port
     
-    console.log("Vaste Grond listening at http://%s:%s", host, port)
- })
+    console.log("Vaste Grond listening at ", port);
+
+    mongoose.connect(`mongodb://${MONGO_HOST}/${MONGO_DB}`, { useNewUrlParser: true })
+    .then(() => {
+        console.log("Connected to mongo");
+
+        init.initDB();
+    })
+    .catch((err) => {
+        console.error("Error at connecting to mongodb: ", err);
+    });
+});
+
+
+

@@ -32,6 +32,8 @@ services:
     environment:
       - NODE_ENV=development
       - PORT=9000
+      - MONGO_HOST=mongodb:27017
+      - MONGO_DB=vastegrond
     expose:
       - "9000"
     ports:

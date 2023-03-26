@@ -1,9 +1,9 @@
-FROM node:12-alpine3.11
+FROM node:19-alpine
 WORKDIR /app
 COPY /src/. ./
-RUN apk --no-cache add --virtual native-deps \
-  g++ gcc libgcc libstdc++ linux-headers make python && \
-  npm install --quiet node-gyp -g &&\
+RUN npm install --quiet node-gyp -g &&\
   npm install --quiet && \
-  apk del native-deps
+  npm i -g nodemon
+
 CMD ["npm", "run-script", "run"]
+#CMD ["nodemon", "--exec", "npm", "run-script", "run"]
