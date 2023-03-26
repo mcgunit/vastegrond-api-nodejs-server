@@ -32,4 +32,6 @@ Voer volgende commando in om het project te stoppen:
 
 ### Voor Windows en MacOs
 
-Docker-copose heeft een interface om docker-compose.yml bestanden in te laden en te monitoren.
+Docker heeft een interface om docker-compose.yml bestanden in te laden en te monitoren. 
+
+- [Docker Desktop] (https://www.docker.com/products/docker-desktop/) met docker-compose plugin
