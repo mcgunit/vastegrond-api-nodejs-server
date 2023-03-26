@@ -1,6 +1,6 @@
 FROM node:12-alpine3.11
 WORKDIR /app
-COPY /app/. ./
+COPY /src/. ./
 RUN apk --no-cache add --virtual native-deps \
   g++ gcc libgcc libstdc++ linux-headers make python && \
   npm install --quiet node-gyp -g &&\

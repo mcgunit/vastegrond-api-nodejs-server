@@ -1,6 +1,6 @@
 # vastegrond-api-nodejs-server
 
-## How-to
+## How-to voor local development
 
 Gebruik docker-compose om deze api te starten. Er worden 3 builds gedaan:
 
@@ -9,6 +9,8 @@ Gebruik docker-compose om deze api te starten. Er worden 3 builds gedaan:
 - Een MongoDB
 
 - Een NGINX
+
+### In linux
 
 Open een terminal voor volgende commando in om het project te bouwen:
 
@@ -27,3 +29,7 @@ Voer volgende commando in om het project te stoppen:
 ```
     sudo docker-compose down
 ```
+
+### Voor Windows en MacOs
+
+Docker-copose heeft een interface om docker-compose.yml bestanden in te laden en te monitoren.
