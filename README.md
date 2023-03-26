@@ -1,5 +1,7 @@
 # vastegrond-api-nodejs-server
 
+Dit is de back-end voor de vastegrond-react-app (front-end). Om de front-end te runnen zie Readme in de [vastegrond-react-app](https://github.com/mcgunit/vastegrond-react-app)
+
 ## How-to voor local development
 
 Gebruik docker-compose om deze api te starten. Er worden 3 builds gedaan:
