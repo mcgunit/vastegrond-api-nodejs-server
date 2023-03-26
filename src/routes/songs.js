@@ -22,7 +22,7 @@ router.get('/getsongs', (req, res) => {
   SongsModel.find({})
   .then((songsList) => {
     //console.log("Getting Songs: ", JSON.stringify({songsList: songsList}));
-    res.json(JSON.stringify({songsList: songsList}));
+    res.json({songsList: songsList});
   })
   .catch((err) => {
     res.send();
